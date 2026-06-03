@@ -1,10 +1,11 @@
 use std::io;
 fn main() {
-    let variable1 = "Rust";
-    let variable2 = "No";
+    let variable1 = "rust";
+    let variable2 = "no";
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Error reading input");
-    let input = input.trim(); 
+    let input = input.to_lowercase(); 
+    let input = input.trim();
     match_input(input, variable1, variable2);
 
 }
